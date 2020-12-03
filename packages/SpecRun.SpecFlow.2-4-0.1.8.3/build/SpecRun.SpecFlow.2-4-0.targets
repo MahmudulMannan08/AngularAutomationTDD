@@ -1,0 +1,13 @@
+﻿<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  
+  <ItemGroup>
+    <!-- Workaround for Update attribute, as this is only available with MSBuild 15-->
+    <None Include="*.srProfile" >
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>true</Visible>
+    </None>
+  </ItemGroup>
+
+  
+</Project>

@@ -1,0 +1,34 @@
+﻿<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_SpecFlowPlusRunner_TestAdapterFiles Condition="'$(_SpecFlowPlusRunner_TestAdapterFiles)' == '' ">$(MSBuildThisFileDirectory)..\tools</_SpecFlowPlusRunner_TestAdapterFiles>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="$(_SpecFlowPlusRunner_TestAdapterFiles)\**\*" Exclude="$(MSBuildThisFileDirectory)..\tools\server\**\*;$(_SpecFlowPlusRunner_TestAdapterFiles)\Licenses\**\*">
+      <Link>SpecFlowPlusRunner\%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+
+    <None Include="$(_SpecFlowPlusRunner_TestAdapterFiles)\TechTalk.SpecRun.VisualStudio.TestAdapter.*" >
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+
+    <None Include="$(_SpecFlowPlusRunner_TestAdapterFiles)\TechTalk.SpecRun.Framework.dll" >
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+
+    <None Include="$(_SpecFlowPlusRunner_TestAdapterFiles)\TechTalk.SpecRun.Framework.*.dll" >
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </None>
+    
+
+    <ProjectCapability Include="TestContainer" />
+  </ItemGroup>
+</Project>
