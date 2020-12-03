@@ -17,5 +17,6 @@
 
 ### Project Insight
 - Frontend UI automation for an Angular website with Protractor
+- Rest API services automation
 - TDD framework based on read and write capability on reusable Excel test data
 - Custom report generation from Specflow
