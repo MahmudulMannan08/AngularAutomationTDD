@@ -15,9 +15,9 @@
 
 - Protractor (Browser driver for Angular based website)
 
-- RestSharp (REST API automation package)
+- RestSharp (REST API automation client library)
 
-- Newtonsoft.JSON (JSON parser)
+- JSON.NET (Newtonsoft.JSON) (JSON serializer)
 
 ### Project Insight
 - Frontend UI automation for an Angular website with Protractor
